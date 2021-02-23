@@ -5,3 +5,12 @@
 body{
   padding: 5%;
 }
+
+input{
+  color: grey;
+  width: 100%;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
