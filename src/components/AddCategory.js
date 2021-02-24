@@ -18,7 +18,7 @@ export const AddCategory =  ({setCategories}) =>  { //setCategories lo pasamos c
         
 
         if (inputValue.trim().length > 2) { //trim( ) devuelve la cadena de texto despojada de los espacios en blanco en ambos extremos
-            setCategories( categoria => [...categoria, inputValue]) //Usamos el operador spread en el arreglo ...categoria y le pasamos el valor nuevo que viene del input
+            setCategories( categoria => [inputValue, ...categoria]) //Usamos el operador spread en el arreglo ...categoria y le pasamos el valor nuevo que viene del input
             setInputValue(''); //Ponemos el input en blanco una vez hace una busqueda
         }
 
