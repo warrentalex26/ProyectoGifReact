@@ -1,7 +1,7 @@
 
 
 export const getGifs = async(category) => { //Usamos Async y await para hacer una peticion asincrona
-    const api = `BHzrVw5bm8RmxyqDHF6i4qP9iH3UesCm`
+    const api = `API_KEY` //PONER SU API KEY ACA
     const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=10&api_key=${api}`; //Esa es la url para hacer las peticiones GET a giphy - encodeURI nos sirve para quitar los espacios con %20 etc, para sea una URL Valida
     const resp = await fetch(url); //Usamos el fetch para consumir los datos
     const {data} = await resp.json(); // Los datos los pasamos a un formato JSON
