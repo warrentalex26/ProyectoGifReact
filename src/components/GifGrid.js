@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import GifGridItem from './GifGridItem'
 
 const GifGrid = ({category}) => {
 
-    const [count, setCount] = useState(0);
+    const [images, setImages] = useState([])
 
     useEffect( () => { //Solo se ejecute esta instrucción cuando el componente es renderizado por primera vez
         getGifs()
@@ -22,15 +23,19 @@ const GifGrid = ({category}) => {
         })
 
         console.log({gifs})
-
+        setImages(gifs) //Mandamos el nuevo valor de estado con el rreglo de gifs de la API
+        
+    
+    
     }
 
 
     return (
         <div>
             <h3>{category}</h3>
-            <h2>{count}</h2>
-            <button onClick={ () => setCount(count + 1)}>Boton</button>
+
+                 {images.map( img => <GifGridItem key={img.id} {...img}/>)}
+
         </div>
     )
 }
