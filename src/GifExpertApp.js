@@ -6,7 +6,7 @@ import GifGrid from './components/GifGrid'
 const GifExpertApp = () => {
 
     //const categories = ['One Punch', 'Samurai X', 'Dragon Ball'];
-    const [categories, setCategories] = useState(['Goku'])
+    const [categories, setCategories] = useState(['Gohan'])
     
     // const handledAdd = () => {
     //   /*AGREGAR ELEMENTOS AL ARREGLO DE ESTA MANERA PARA CAMBIAR EL ESTADO*/ 
